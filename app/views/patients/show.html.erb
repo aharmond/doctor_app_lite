@@ -1,0 +1,10 @@
+<h1 class="ui center aligned header"><%= @patient.name %>'s Appointments</h1>
+<div class="ui divider"></div>
+<ul>
+<% @appointments.each do |appointment| %>
+  <li class="item">
+    <%= appointment.date %> // <%= appointment.doctor.name %>
+  </li>
+  <br />
+<% end %>
+<div class="ui divider"></div>

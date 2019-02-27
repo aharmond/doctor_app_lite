@@ -1,0 +1,16 @@
+<h1 class="ui center aligned header">Add Appointment</h1>
+<div class="ui form">
+  <%= form_with(model: [@doctor, @appointment], local: true) do |f| %>
+    <div class="item">
+      <%= f.label :patient %>
+      <%= f.select :patient_id, @patients.collect { |p| [p.name, p.id] } %>
+    </div>
+    <br />
+    <div class="item">
+      <%= f.label :date %>
+      <%= f.datetime_local_field :date %>
+    </div>
+    <br />
+    <button class="ui green button" type="submit">Submit</button> 
+  <% end %>
+</div>

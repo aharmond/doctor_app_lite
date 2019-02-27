@@ -1,0 +1,13 @@
+<h1 class="ui center aligned header"><%= @doctor.name %>'s Appointments</h1>
+<%= link_to 'Add Appointment', new_doctor_appointment_path(@doctor), class: "ui inverted blue button" %>
+<hr />
+<ul class="ui list">
+  <% @appointments.each do |appointment| %>
+    <li class="item">
+      <%= appointment.date %> // <%= appointment.patient.name %>
+      <br />
+      <%= link_to 'Remove', doctor_appointment_path(@doctor, appointment), method: :delete %>
+    </li>
+  <% end %>
+</ul>
+

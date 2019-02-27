@@ -1,0 +1,9 @@
+<h1 class="ui centered header">Doctor Index</h1>
+  <ul class="ui list">
+    <% @doctors.each do |d| %>
+      <li class=item>
+        <%= link_to d.name, doctor_path(d) %>
+      </li>
+    <% end %>
+<div class="ui divider"></div>
+<%= link_to 'Add Doctor', new_doctor_path, class: "ui basic button" %>

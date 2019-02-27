@@ -1,0 +1,12 @@
+<h1 class="ui centered header">Patients Index</h1>
+<div class="hidden divider"></div>
+<ul>
+<% @patients.each do |p| %>
+  <li class="item">
+    <%= link_to p.name, patient_path(p) %>
+  </li>
+  <br />
+<% end %>
+</ul>
+<div class="ui divider"></div>
+<%= link_to 'Add Patient', new_patient_path, class: "ui basic button" %>

@@ -1,0 +1,8 @@
+<h1 class="ui center aligned header"><%= @doctor.name %></h1>
+<hr />
+<br />
+<%= link_to 'Appointments', doctor_appointments_path(@doctor), class: "ui big blue basic button" %>
+<br />
+<br />
+<br />
+<%= link_to 'Remove Doctor', @doctor, method: :delete, class: "ui red basic button" %>
